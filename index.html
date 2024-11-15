@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  https://fonts.google.com/share?selection.family=Geist:wght@100..900|Source+Code+Pro:ital,wght@0,200..900;1,200..900
+ <link rel="stylesheet" href="https://fonts.google.com/share?selection.family=Geist:wght@100..900|Source+Code+Pro:ital,wght@0,200..900;1,200..900">
   <link rel="stylesheet" href="styles.css"/>
 </head>
 <body >
@@ -19,28 +19,32 @@
 
     <main>
       <div>
-        <form action="">
+        <form action="" class="search-form">
           
-          <input type="search" name="city" id="city-name" placeholder="Enter city name" required />
+          <input type="search" name="city" id="city-name" placeholder="Enter city name" required class="form-input"/>
     
-          <button type="submit">search</button>
+          <button type="submit" class="form-button">search</button>
         </form>
       </div>
-      <div>
+    
+      <div class="weather-data">
         <h3>Paris</h3>
+       <h3>
+        ☀️ 18 
+        <strong>˚C</strong>
+         
+       </h3>
+      
+      </div>
+
+      <div>
         <p>
           Tuesday 14.40, scattered clouds
           <br />
           Humidity : 66%, Wind : 4.3 knots
         </p>
       </div>
-      <div>
-        <h3>
-          ☀️ 18 ˚C
-        </h3>
-      </div>
-    
-    
+      
     </main>
     
     <footer>
