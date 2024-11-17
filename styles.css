@@ -41,8 +41,13 @@ h2{
   justify-content: space-between;
 }
 .weather-app-icon {
-  font-size: 44px;
-  margin-top: 22px;
+  height: 80px;
+  width: 80px;
+  line-height: 20px;
+  
+  padding-bottom: 10px;
+ 
+  margin-top: 3px;
 }
 
 .weather-app-temperature {
@@ -54,6 +59,10 @@ h2{
 .weatehr-app-unit {
   margin-top: 16px;
   font-size: 28px;
+}
+.Humidity{
+  color: rgb(123, 3, 123);
+  font-weight: bold;
 }
 .form-input{
   

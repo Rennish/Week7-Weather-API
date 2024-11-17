@@ -7,31 +7,45 @@ function refreshWeather(currentweather){
 
  //document.write(currentTemperature); 
 
+ //display the temperature
  let currenteTemperatureValue = document.querySelector("#currenttemperaturevalue"); 
 
  //currenteTemperatureValue.innerHTML = currentTemperature ; 
  //this is a shorter way of doing the exact same thing the commented codes do. 
  currenteTemperatureValue.innerHTML = Math.round(currentweather.data.temperature.current) ; 
 
+ //display the weather description
  let weatherDescription = document.querySelector("#weatherdescription") ; 
  weatherDescription.innerHTML = currentweather.data.condition.description ; 
 
 
- let currentWeatherIcon = document.querySelector("#currentweathericon"); 
- //currentWeatherIcon.innerHTML = currentweather.data.condition.icon ; 
+ let currentWeatherIcon = document.querySelector("#weather-app-icon"); 
+ currentWeatherIcon.innerHTML = `
+                <img 
+                src="${currentweather.data.condition.icon_url}"
+                alt = "not loading"
+                class = "weather-app-icon"  
+                /> ` ; 
+
 
  console.log(currentweather.data); 
  
+ //display the humidity 
  let humidity = document.querySelector("#Humidity"); 
-
  humidity.innerHTML = `${currentweather.data.temperature.humidity}%`; 
 
+
+ //display the wind speed 
  let windSpeed = document.querySelector("#windspeed"); 
  windSpeed.innerHTML  = `${currentweather.data.wind.speed} knots `; 
 
+ //display day and time 
  let currentTime = document.querySelector("#currenttime"); 
  let date = new Date(currentweather.data.time * 1000); 
  currentTime.innerHTML = formatDate(date);
+
+
+
  
 }
 
