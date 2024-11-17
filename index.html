@@ -4,8 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
- <link rel="stylesheet" href="https://fonts.google.com/share?selection.family=Geist:wght@100..900|Source+Code+Pro:ital,wght@0,200..900;1,200..900">
+
   <link rel="stylesheet" href="styles.css"/>
+  <script src="https://unpkg.com/axios@1.6.7/dist/axios.min.js"></script>
 </head>
 <body >
   <div class="weather-app">
@@ -29,12 +30,19 @@
     
       <div class="weather-data">
         <h3>Paris</h3>
-       <h3>
+        <!--
+        <h3>
         ☀️ 18 
         <strong>˚C</strong>
          
        </h3>
-      
+        -->
+       
+      <div class="weather-app-temperature-container">
+        <div class="weather-app-icon">🌤️</div>
+        <div class="weather-app-temperature" id="currenttemperaturevalue">12</div>
+        <div class="weatehr-app-unit">°C</div>
+      </div>
       </div>
 
       <div>
