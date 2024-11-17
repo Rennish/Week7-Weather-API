@@ -12,7 +12,48 @@ function refreshWeather(currentweather){
  //currenteTemperatureValue.innerHTML = currentTemperature ; 
  //this is a shorter way of doing the exact same thing the commented codes do. 
  currenteTemperatureValue.innerHTML = Math.round(currentweather.data.temperature.current) ; 
+
+ let weatherDescription = document.querySelector("#weatherdescription") ; 
+ weatherDescription.innerHTML = currentweather.data.condition.description ; 
+
+
+ let currentWeatherIcon = document.querySelector("#currentweathericon"); 
+ //currentWeatherIcon.innerHTML = currentweather.data.condition.icon ; 
+
+ console.log(currentweather.data); 
  
+ let humidity = document.querySelector("#Humidity"); 
+
+ humidity.innerHTML = `${currentweather.data.temperature.humidity}%`; 
+
+ let windSpeed = document.querySelector("#windspeed"); 
+ windSpeed.innerHTML  = `${currentweather.data.wind.speed} knots `; 
+
+ let currentTime = document.querySelector("#currenttime"); 
+ let date = new Date(currentweather.data.time * 1000); 
+ currentTime.innerHTML = formatDate(date);
+ 
+}
+
+function formatDate(date){
+  let minutes = date.getMinutes();
+  let hours = date.getHours();
+  let days = ["Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+  ]
+
+  let day = days[date.getDay()]; 
+
+  if (minutes <10){
+    minutes = `0${minutes}` ; 
+  }
+
+  return `${day} ${hours}:${minutes}` ; 
 }
 
 function searchCity(currentcityName){
