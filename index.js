@@ -90,3 +90,29 @@ function displayCity(event){
 }
 let searchForm = document.querySelector("#search-form"); 
 searchForm.addEventListener("submit", displayCity); 
+
+
+function weatherForecast(){
+  let weatherforecast = document.querySelector("#weather-forecast"); 
+
+  let days = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']; 
+   let displayforecast = " "; 
+
+  days.forEach(function (day){
+
+    displayforecast +=   
+    `
+    <div class="weather-forecast-day">
+        <div class="weather-forecast-date">${day} </div>
+        <div class="weather-forecast-icon">🌦️</div>
+        <div class="weather-forecast-temperatures">
+          <div class="weather-forecast-temperature">15˚</div>
+          <div class="weather-forecast-temperature" id="next-day-temperature">19˚</div>
+        </div>
+      </div>
+`;
+  });
+weatherforecast.innerHTML = displayforecast ; 
+}
+
+weatherForecast();
